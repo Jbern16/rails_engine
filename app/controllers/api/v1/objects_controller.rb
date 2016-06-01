@@ -29,6 +29,8 @@ class Api::V1::ObjectsController < ApiController
                    :result)
     end
 
+    def column_names
+
     def find_model
        File.basename(controller_name).classify.constantize
     end
