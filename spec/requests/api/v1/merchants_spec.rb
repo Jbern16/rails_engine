@@ -54,11 +54,26 @@ describe "GET /api/v1/merchants/find?parameters" do
        })
   end
 
+
   it "returns the merchant with the name of Jack" do
     merchant_1 = create(:merchant, name: "Jack")
     merchant_2 = create(:merchant)
 
      get "/api/v1/merchants/find?name=Jack"
+
+     expect(json_body).to eq({
+       "id" => merchant_1.id,
+       "name" => "Jack",
+       "created_at" => parse_time(merchant_1.created_at),
+       "updated_at" => parse_time(merchant_1.updated_at)
+       })
+  end
+
+  it "returns the merchant with the name of Jack case-insensitive" do
+    merchant_1 = create(:merchant, name: "Jack")
+    merchant_2 = create(:merchant)
+
+     get "/api/v1/merchants/find?name=JAcK"
 
      expect(json_body).to eq({
        "id" => merchant_1.id,

@@ -23,7 +23,9 @@ class Api::V1::ObjectsController < ApiController
     private
 
     def find_selector
-      params.slice(:id, :name)
+      params.slice(:id, :name, :first_name, :last_name, :unit_price,
+                   :merchant_id, :description, :quantity, :customer_id,
+                   :item_id, :invoice_id)
     end
 
     def find_model
