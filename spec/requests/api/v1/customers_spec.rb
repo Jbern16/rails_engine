@@ -171,9 +171,10 @@ describe "GET /api/v1/customers/find_all?parameters" do
   end
 
 
-  it "returns the all customer with the last_name of None" do
+  it "returns the all customer with the last_name of Nonce" do
 
-     get "/api/v1/customers/find_all?last_name=Jack"
+     get "/api/v1/customers/find_all?last_name=Nonce"
+
 
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,

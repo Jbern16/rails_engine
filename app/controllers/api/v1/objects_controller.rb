@@ -13,7 +13,7 @@ class Api::V1::ObjectsController < ApiController
     end
 
     def find_all
-      respond_with find_model.where(find_selector.to_h)
+      respond_with find_model.where(find_selector)
     end
 
     def random
@@ -23,13 +23,13 @@ class Api::V1::ObjectsController < ApiController
     private
 
     def find_selector
-      params.slice(:id, :name, :first_name, :last_name, :unit_price,
-                   :merchant_id, :description, :quantity, :customer_id,
-                   :item_id, :invoice_id, :credit_card_number, :credit_card_expiration_date,
-                   :result)
+      params.permit(all_column_names)
     end
 
-    def column_names
+    def all_column_names
+      Merchant.column_names | Customer.column_names | InvoiceItem.column_names |
+      Transaction.column_names | Item.column_names | Invoice.column_names
+    end
 
     def find_model
        File.basename(controller_name).classify.constantize
