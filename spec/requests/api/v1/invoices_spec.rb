@@ -17,7 +17,7 @@ describe "GET /api/v1/invoices.json" do
       "status" => "shipped",
       "merchant_id" => @invoice_1.merchant_id,
       "customer_id" => @invoice_1.customer_id
-      
+
       })
   end
 end
@@ -102,7 +102,7 @@ describe "GET /api/v1/invoices/find?parameters" do
        })
     end
 
-  xit "returns the invoice with the same created_at" do
+  it "returns the invoice with the same created_at" do
 
      get "/api/v1/invoices/find?created_at=#{@invoice_1.created_at.to_s}"
 
@@ -115,7 +115,7 @@ describe "GET /api/v1/invoices/find?parameters" do
        })
   end
 
-  xit "returns the invoice with the same updated_at" do
+  it "returns the invoice with the same updated_at" do
 
      get "/api/v1/invoices/find?updated_at=#{@invoice_1.updated_at}"
 
@@ -170,7 +170,7 @@ describe "GET /api/v1/invoices/find_all?parameters" do
       })
   end
 
-  xit "returns all invoices with the same created_at" do
+  it "returns all invoices with the same created_at" do
 
      get "/api/v1/invoices/find_all?created_at=#{@invoice_1.created_at.to_s}"
 
@@ -183,7 +183,7 @@ describe "GET /api/v1/invoices/find_all?parameters" do
        })
   end
 
-  xit "returns all invoices with the same updated_at" do
+  it "returns all invoices with the same updated_at" do
 
      get "/api/v1/invoices/find_all?updated_at=#{@invoice_1.updated_at}"
 

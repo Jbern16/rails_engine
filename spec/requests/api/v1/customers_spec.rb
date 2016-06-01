@@ -89,9 +89,9 @@ describe "GET /api/v1/customers/find?parameters" do
        })
     end
 
-  xit "returns the customer with the same created_at" do
+  it "returns the customer with the same created_at" do
 
-     get "/api/v1/customers/find?created_at=#{@customer_1.created_at.to_s}"
+     get "/api/v1/customers/find?created_at=#{@customer_1.created_at}"
 
      expect(json_body).to eq({
        "id" => @customer_1.id,
@@ -100,7 +100,7 @@ describe "GET /api/v1/customers/find?parameters" do
        })
   end
 
-  xit "returns the customer with the same updated_at" do
+  it "returns the customer with the same updated_at" do
 
      get "/api/v1/customers/find?updated_at=#{@customer_1.updated_at}"
 
@@ -167,9 +167,9 @@ describe "GET /api/v1/customers/find_all?parameters" do
       })
   end
 
-  xit "returns all customers with the same created_at" do
+  it "returns all customers with the same created_at" do
 
-     get "/api/v1/customers/find_all?created_at=#{@customer_1.created_at.to_s}"
+     get "/api/v1/customers/find_all?created_at=#{@customer_1.created_at}"
 
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
@@ -178,7 +178,7 @@ describe "GET /api/v1/customers/find_all?parameters" do
        })
   end
 
-  xit "returns all customers with the same updated_at" do
+  it "returns all customers with the same updated_at" do
 
      get "/api/v1/customers/find_all?updated_at=#{@customer_1.updated_at}"
 

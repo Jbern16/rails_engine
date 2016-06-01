@@ -89,7 +89,7 @@ describe "GET /api/v1/items/find?parameters" do
        })
   end
 
-  xit "returns the item with the same created_at" do
+  it "returns the item with the same created_at" do
 
      get "/api/v1/items/find?created_at=#{@item_1.created_at.to_s}"
 
@@ -102,7 +102,7 @@ describe "GET /api/v1/items/find?parameters" do
        })
   end
 
-  xit "returns the item with the same updated_at" do
+  it "returns the item with the same updated_at" do
 
      get "/api/v1/items/find?updated_at=#{@item_1.updated_at}"
 
@@ -179,7 +179,7 @@ describe "GET /api,/v1/items/find_all?parameters" do
       })
   end
 
-  xit "returns all items with the same created_at" do
+  it "returns all items with the same created_at" do
 
      get "/api/v1/items/find_all?created_at=#{@item_1.created_at.to_s}"
 
@@ -192,7 +192,7 @@ describe "GET /api,/v1/items/find_all?parameters" do
        })
   end
 
-  xit "returns all items with the same updated_at" do
+  it "returns all items with the same updated_at" do
 
      get "/api/v1/items/find_all?updated_at=#{@item_1.updated_at}"
 

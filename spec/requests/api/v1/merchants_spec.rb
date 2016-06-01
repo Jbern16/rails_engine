@@ -73,7 +73,7 @@ describe "GET /api/v1/merchants/find?parameters" do
        })
   end
 
-  xit "returns the merchant with the same created_at" do
+  it "returns the merchant with the same created_at" do
     merchant_1 = create(:merchant, name: "Jack")
     merchant_2 = create(:merchant)
 
@@ -85,7 +85,7 @@ describe "GET /api/v1/merchants/find?parameters" do
        })
   end
 
-  xit "returns the merchant with the same updated_at" do
+  it "returns the merchant with the same updated_at" do
     merchant_1 = create(:merchant, name: "Jack")
     merchant_2 = create(:merchant)
 
@@ -133,7 +133,7 @@ describe "GET /api/v1/merchants/find_all?parameters" do
       })
   end
 
-  xit "returns all merchants with the same created_at" do
+  it "returns all merchants with the same created_at" do
     merchant_1 = create(:merchant, name: "Jack")
     merchant_2 = create(:merchant)
 
@@ -145,7 +145,7 @@ describe "GET /api/v1/merchants/find_all?parameters" do
        })
   end
 
-  xit "returns all merchants with the same updated_at" do
+  it "returns all merchants with the same updated_at" do
     merchant_1 = create(:merchant, name: "Jack")
     merchant_2 = create(:merchant)
 

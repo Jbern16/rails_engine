@@ -115,7 +115,7 @@ describe "GET /api/v1/invoice_items/find?parameters" do
          })
       end
 
-  xit "returns the invoice with the same created_at" do
+  it "returns the invoice with the same created_at" do
 
      get "/api/v1/invoice_items/find?created_at=#{@invoice_item_1.created_at.to_s}"
 
@@ -128,7 +128,7 @@ describe "GET /api/v1/invoice_items/find?parameters" do
        })
   end
 
-  xit "returns the invoice with the same updated_at" do
+  it "returns the invoice with the same updated_at" do
 
      get "/api/v1/invoice_items/find?updated_at=#{@invoice_item_1.updated_at}"
 
@@ -204,7 +204,7 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
       })
   end
 
-  xit "returns all invoice_items with the same created_at" do
+  it "returns all invoice_items with the same created_at" do
 
      get "/api/v1/invoice_items/find_all?created_at=#{@invoice_item_1.created_at.to_s}"
 
@@ -217,7 +217,7 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
        })
   end
 
-  xit "returns all invoice_items with the same updated_at" do
+  it "returns all invoice_items with the same updated_at" do
 
      get "/api/v1/invoice_items/find_all?updated_at=#{@invoice_item_1.updated_at}"
 

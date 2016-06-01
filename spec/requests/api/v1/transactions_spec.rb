@@ -120,7 +120,7 @@ describe "GET /api/v1/transactions/find?parameters" do
          })
       end
 
-  xit "returns the transaction with the same created_at" do
+  it "returns the transaction with the same created_at" do
 
      get "/api/v1/transactions/find?created_at=#{@transaction_1.created_at.to_s}"
 
@@ -132,7 +132,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        })
   end
 
-  xit "returns the transaction with the same updated_at" do
+  it "returns the transaction with the same updated_at" do
 
      get "/api/v1/transactions/find?updated_at=#{@transaction_1.updated_at}"
 
@@ -215,7 +215,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        })
     end
 
-  xit "returns all transactions with the same created_at" do
+  it "returns all transactions with the same created_at" do
 
      get "/api/v1/transactions/find_all?created_at=#{@transaction_1.created_at.to_s}"
 
@@ -227,7 +227,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        })
   end
 
-  xit "returns all transactions with the same updated_at" do
+  it "returns all transactions with the same updated_at" do
 
      get "/api/v1/transactions/find_all?updated_at=#{@transaction_1.updated_at}"
 
