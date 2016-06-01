@@ -15,9 +15,7 @@ describe "GET /api/v1/customers.json" do
     expect(json_body[0]).to eq({
       "id" => @customer_1.id,
       "first_name" => "Jack",
-      "last_name" => "Nonce",
-      "created_at" => parse_time(@customer_1.created_at),
-      "updated_at" => parse_time(@customer_1.updated_at)
+      "last_name" => "Nonce"
       })
 
   end
@@ -36,9 +34,7 @@ describe "GET /api/v1/customers/:id.json" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 end
@@ -55,9 +51,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -68,9 +62,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -81,9 +73,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -95,9 +85,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
     end
 
@@ -108,9 +96,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -121,9 +107,7 @@ describe "GET /api/v1/customers/find?parameters" do
      expect(json_body).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 end
@@ -142,9 +126,7 @@ describe "GET /api/v1/customers/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -156,17 +138,13 @@ describe "GET /api/v1/customers/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
       })
 
      expect(json_body[1]).to eq({
        "id" => @customer_2.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_2.created_at),
-       "updated_at" => parse_time(@customer_2.updated_at)
+       "last_name" => "Nonce"
       })
   end
 
@@ -179,17 +157,13 @@ describe "GET /api/v1/customers/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
       })
 
      expect(json_body[1]).to eq({
        "id" => @customer_2.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_2.created_at),
-       "updated_at" => parse_time(@customer_2.updated_at)
+       "last_name" => "Nonce"
       })
   end
 
@@ -200,9 +174,7 @@ describe "GET /api/v1/customers/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 
@@ -213,9 +185,7 @@ describe "GET /api/v1/customers/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @customer_1.id,
        "first_name" => "Jack",
-       "last_name" => "Nonce",
-       "created_at" => parse_time(@customer_1.created_at),
-       "updated_at" => parse_time(@customer_1.updated_at)
+       "last_name" => "Nonce"
        })
   end
 end

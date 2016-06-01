@@ -16,10 +16,7 @@ describe "GET /api/v1/transactions.json" do
       "id" => @transaction_1.id,
       "invoice_id" => @transaction_1.invoice_id,
       "credit_card_number" => @transaction_1.credit_card_number,
-      "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-      "result" => "success",
-      "created_at" => parse_time(@transaction_1.created_at),
-      "updated_at" => parse_time(@transaction_1.updated_at)
+      "result" => "success"
       })
   end
 end
@@ -38,10 +35,7 @@ describe "GET /api/v1/transactions/:id.json" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 end
@@ -59,10 +53,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 
@@ -75,10 +66,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 
@@ -91,10 +79,7 @@ describe "GET /api/v1/transactions/find?parameters" do
          "id" => @transaction_1.id,
          "invoice_id" => @transaction_1.invoice_id,
          "credit_card_number"=> @transaction_1.credit_card_number,
-         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-         "result" => "success",
-         "created_at" => parse_time(@transaction_1.created_at),
-         "updated_at" => parse_time(@transaction_1.updated_at)
+         "result" => "success"
          })
     end
 
@@ -107,10 +92,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
     end
 
@@ -122,10 +104,7 @@ describe "GET /api/v1/transactions/find?parameters" do
          "id" => @transaction_1.id,
          "invoice_id" => @transaction_1.invoice_id,
          "credit_card_number" => @transaction_1.credit_card_number,
-         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-         "result" => "success",
-         "created_at" => parse_time(@transaction_1.created_at),
-         "updated_at" => parse_time(@transaction_1.updated_at)
+         "result" => "success"
          })
       end
 
@@ -137,10 +116,7 @@ describe "GET /api/v1/transactions/find?parameters" do
          "id" => @transaction_1.id,
          "invoice_id" => @transaction_1.invoice_id,
          "credit_card_number" => @transaction_1.credit_card_number,
-         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-         "result" => "success",
-         "created_at" => parse_time(@transaction_1.created_at),
-         "updated_at" => parse_time(@transaction_1.updated_at)
+         "result" => "success"
          })
       end
 
@@ -152,10 +128,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 
@@ -167,10 +140,7 @@ describe "GET /api/v1/transactions/find?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 end
@@ -190,10 +160,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 
@@ -205,20 +172,14 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
       })
 
      expect(json_body[1]).to eq({
        "id" => @transaction_2.id,
        "invoice_id" => @transaction_2.invoice_id,
        "credit_card_number" => @transaction_2.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_2.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_2.created_at),
-       "updated_at" => parse_time(@transaction_2.updated_at)
+       "result" => "success"
       })
   end
 
@@ -231,20 +192,14 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
       })
 
      expect(json_body[1]).to eq({
        "id" => @transaction_2.id,
        "invoice_id" => @transaction_2.invoice_id,
        "credit_card_number" => @transaction_2.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_2.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_2.created_at),
-       "updated_at" => parse_time(@transaction_2.updated_at)
+       "result" => "success"
       })
   end
 
@@ -256,10 +211,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
     end
 
@@ -271,10 +223,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 
@@ -286,10 +235,7 @@ describe "GET /api/v1/transactions/find_all?parameters" do
        "id" => @transaction_1.id,
        "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
-       "result" => "success",
-       "created_at" => parse_time(@transaction_1.created_at),
-       "updated_at" => parse_time(@transaction_1.updated_at)
+       "result" => "success"
        })
   end
 end

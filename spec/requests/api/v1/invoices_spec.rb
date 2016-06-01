@@ -16,9 +16,8 @@ describe "GET /api/v1/invoices.json" do
       "id" => @invoice_1.id,
       "status" => "shipped",
       "merchant_id" => @invoice_1.merchant_id,
-      "customer_id" => @invoice_1.customer_id,
-      "created_at" => parse_time(@invoice_1.created_at),
-      "updated_at" => parse_time(@invoice_1.updated_at)
+      "customer_id" => @invoice_1.customer_id
+      
       })
   end
 end
@@ -37,9 +36,8 @@ describe "GET /api/v1/invoices/:id.json" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 end
@@ -57,9 +55,8 @@ describe "GET /api/v1/invoices/find?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 
@@ -72,9 +69,8 @@ describe "GET /api/v1/invoices/find?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 
@@ -87,9 +83,8 @@ describe "GET /api/v1/invoices/find?parameters" do
          "id" => @invoice_1.id,
          "status" => "shipped",
          "merchant_id" => @invoice_1.merchant_id,
-         "customer_id" => @invoice_1.customer_id,
-         "created_at" => parse_time(@invoice_1.created_at),
-         "updated_at" => parse_time(@invoice_1.updated_at)
+         "customer_id" => @invoice_1.customer_id
+
          })
     end
 
@@ -102,9 +97,8 @@ describe "GET /api/v1/invoices/find?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
     end
 
@@ -116,9 +110,8 @@ describe "GET /api/v1/invoices/find?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 
@@ -130,9 +123,8 @@ describe "GET /api/v1/invoices/find?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 end
@@ -152,9 +144,8 @@ describe "GET /api/v1/invoices/find_all?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 
@@ -166,18 +157,16 @@ describe "GET /api/v1/invoices/find_all?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
       })
 
      expect(json_body[1]).to eq({
        "id" => @invoice_2.id,
        "status" => "shipped",
        "merchant_id" => @invoice_2.merchant_id,
-       "customer_id" => @invoice_2.customer_id,
-       "created_at" => parse_time(@invoice_2.created_at),
-       "updated_at" => parse_time(@invoice_2.updated_at)
+       "customer_id" => @invoice_2.customer_id
+
       })
   end
 
@@ -189,9 +178,8 @@ describe "GET /api/v1/invoices/find_all?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 
@@ -203,9 +191,8 @@ describe "GET /api/v1/invoices/find_all?parameters" do
        "id" => @invoice_1.id,
        "status" => "shipped",
        "merchant_id" => @invoice_1.merchant_id,
-       "customer_id" => @invoice_1.customer_id,
-       "created_at" => parse_time(@invoice_1.created_at),
-       "updated_at" => parse_time(@invoice_1.updated_at)
+       "customer_id" => @invoice_1.customer_id
+
        })
   end
 end

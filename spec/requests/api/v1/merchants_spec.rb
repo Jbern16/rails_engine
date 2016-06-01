@@ -12,9 +12,7 @@ describe "GET /api/v1/merchants.json" do
 
     expect(json_body[0]).to eq({
       "id" => merchant_1.id,
-      "name" => "Jack",
-      "created_at" => parse_time(merchant_1.created_at),
-      "updated_at" => parse_time(merchant_1.updated_at)
+      "name" => "Jack"
       })
 
   end
@@ -31,9 +29,7 @@ describe "GET /api/v1/merchants/:id.json" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 end
@@ -48,9 +44,7 @@ describe "GET /api/v1/merchants/find?parameters" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -63,9 +57,7 @@ describe "GET /api/v1/merchants/find?parameters" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -77,9 +69,7 @@ describe "GET /api/v1/merchants/find?parameters" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -91,9 +81,7 @@ describe "GET /api/v1/merchants/find?parameters" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -105,9 +93,7 @@ describe "GET /api/v1/merchants/find?parameters" do
 
      expect(json_body).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 end
@@ -124,9 +110,7 @@ describe "GET /api/v1/merchants/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -139,16 +123,13 @@ describe "GET /api/v1/merchants/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
       })
 
      expect(json_body[1]).to eq({
        "id" => merchant_2.id,
        "name" => "Jack",
-       "created_at" => parse_time(merchant_2.created_at),
-       "updated_at" => parse_time(merchant_2.updated_at)
+
       })
   end
 
@@ -160,9 +141,7 @@ describe "GET /api/v1/merchants/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 
@@ -174,9 +153,7 @@ describe "GET /api/v1/merchants/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => merchant_1.id,
-       "name" => "Jack",
-       "created_at" => parse_time(merchant_1.created_at),
-       "updated_at" => parse_time(merchant_1.updated_at)
+       "name" => "Jack"
        })
   end
 end

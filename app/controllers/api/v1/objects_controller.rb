@@ -1,4 +1,5 @@
 class Api::V1::ObjectsController < ApiController
+  before_action :change_currency
 
     def index
       respond_with find_model.all
@@ -22,17 +23,23 @@ class Api::V1::ObjectsController < ApiController
 
     private
 
-    def find_selector
-      params.permit(all_column_names)
-    end
+      def find_selector
+        params.permit(all_column_names)
+      end
 
-    def all_column_names
-      Merchant.column_names | Customer.column_names | InvoiceItem.column_names |
-      Transaction.column_names | Item.column_names | Invoice.column_names
-    end
+      def change_currency
+        if params[:unit_price]
+          params[:unit_price] = (params[:unit_price].to_f * 100).round
+        end
+      end
 
-    def find_model
-       File.basename(controller_name).classify.constantize
-    end
+      def all_column_names
+        Merchant.column_names | Customer.column_names | InvoiceItem.column_names |
+        Transaction.column_names | Item.column_names | Invoice.column_names
+      end
+
+      def find_model
+         File.basename(controller_name).classify.constantize
+      end
 
 end

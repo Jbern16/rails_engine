@@ -15,11 +15,9 @@ describe "GET /api/v1/invoice_items.json" do
     expect(json_body[0]).to eq({
       "id" => @invoice_item_1.id,
       "quantity" => 25,
-      "unit_price" => 1000,
+      "unit_price" => "10.0",
       "invoice_id" => @invoice_item_1.invoice_id,
-      "item_id" => @invoice_item_1.item_id,
-      "created_at" => parse_time(@invoice_item_1.created_at),
-      "updated_at" => parse_time(@invoice_item_1.updated_at)
+      "item_id" => @invoice_item_1.item_id
       })
   end
 end
@@ -37,11 +35,9 @@ describe "GET /api/v1/invoice_items/:id.json" do
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 end
@@ -58,11 +54,9 @@ describe "GET /api/v1/invoice_items/find?parameters" do
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 
@@ -74,11 +68,9 @@ describe "GET /api/v1/invoice_items/find?parameters" do
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 
@@ -90,27 +82,23 @@ describe "GET /api/v1/invoice_items/find?parameters" do
        expect(json_body).to eq({
          "id" => @invoice_item_1.id,
          "quantity" => 25,
-         "unit_price" => 1000,
+         "unit_price" => "10.0",
          "invoice_id" => @invoice_item_1.invoice_id,
-         "item_id" => @invoice_item_1.item_id,
-         "created_at" => parse_time(@invoice_item_1.created_at),
-         "updated_at" => parse_time(@invoice_item_1.updated_at)
+         "item_id" => @invoice_item_1.item_id
          })
     end
 
 
-  it "returns the invoice with the unit_price of 1000" do
+  it "returns the invoice with the unit_price of 10" do
 
-    get "/api/v1/invoice_items/find?unit_price=1000"
+    get "/api/v1/invoice_items/find?unit_price=10"
 
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
     end
 
@@ -121,11 +109,9 @@ describe "GET /api/v1/invoice_items/find?parameters" do
        expect(json_body).to eq({
          "id" => @invoice_item_1.id,
          "quantity" => 25,
-         "unit_price" => 1000,
+         "unit_price" => "10.0",
          "invoice_id" => @invoice_item_1.invoice_id,
-         "item_id" => @invoice_item_1.item_id,
-         "created_at" => parse_time(@invoice_item_1.created_at),
-         "updated_at" => parse_time(@invoice_item_1.updated_at)
+         "item_id" => @invoice_item_1.item_id
          })
       end
 
@@ -136,11 +122,9 @@ describe "GET /api/v1/invoice_items/find?parameters" do
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 
@@ -151,11 +135,9 @@ describe "GET /api/v1/invoice_items/find?parameters" do
      expect(json_body).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 end
@@ -174,36 +156,29 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 
-  it "returns the all invoice with unit_price of 1000" do
+  it "returns the all invoice with unit_price of 10" do
 
-     get "/api/v1/invoice_items/find_all?unit_price=1000"
-
+   get "/api/v1/invoice_items/find_all?unit_price=10"
      expect(json_body[0]).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
       })
 
      expect(json_body[1]).to eq({
        "id" => @invoice_item_2.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_2.invoice_id,
-       "item_id" => @invoice_item_2.item_id,
-       "created_at" => parse_time(@invoice_item_2.created_at),
-       "updated_at" => parse_time(@invoice_item_2.updated_at)
+       "item_id" => @invoice_item_2.item_id
       })
   end
 
@@ -215,21 +190,17 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
       })
 
      expect(json_body[1]).to eq({
        "id" => @invoice_item_2.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_2.invoice_id,
-       "item_id" => @invoice_item_2.item_id,
-       "created_at" => parse_time(@invoice_item_2.created_at),
-       "updated_at" => parse_time(@invoice_item_2.updated_at)
+       "item_id" => @invoice_item_2.item_id
       })
   end
 
@@ -240,11 +211,9 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 
@@ -255,11 +224,9 @@ describe "GET /api/v1/invoice_items/find_all?parameters" do
      expect(json_body[0]).to eq({
        "id" => @invoice_item_1.id,
        "quantity" => 25,
-       "unit_price" => 1000,
+       "unit_price" => "10.0",
        "invoice_id" => @invoice_item_1.invoice_id,
-       "item_id" => @invoice_item_1.item_id,
-       "created_at" => parse_time(@invoice_item_1.created_at),
-       "updated_at" => parse_time(@invoice_item_1.updated_at)
+       "item_id" => @invoice_item_1.item_id
        })
   end
 end
