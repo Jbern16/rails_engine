@@ -8,6 +8,9 @@ module ApiHelpers
     time.to_json[1..-2]
   end
 
+  def parse_date(date)
+    date.to_json[1..-2]
+  end
 
 
 end

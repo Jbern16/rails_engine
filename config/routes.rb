@@ -26,6 +26,12 @@ Rails.application.routes.draw do
       get "invoice_items/find", defaults: { format: :json }, to: "invoice_items#find"
       get "invoice_items/find_all", defaults: { format: :json }, to: "invoice_items#find_all"
       resources :invoice_items, only: [ :index, :show ]
+
+
+      get "transactions/random", to: "transactions#random"
+      get "transactions/find", defaults: { format: :json }, to: "transactions#find"
+      get "transactions/find_all", defaults: { format: :json }, to: "transactions#find_all"
+      resources :transactions, only: [ :index, :show ]
     end
   end
 

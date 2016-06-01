@@ -14,8 +14,9 @@ describe "GET /api/v1/transactions.json" do
 
     expect(json_body[0]).to eq({
       "id" => @transaction_1.id,
+      "invoice_id" => @transaction_1.invoice_id,
       "credit_card_number" => @transaction_1.credit_card_number,
-      "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+      "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
       "result" => "success",
       "created_at" => parse_time(@transaction_1.created_at),
       "updated_at" => parse_time(@transaction_1.updated_at)
@@ -35,8 +36,9 @@ describe "GET /api/v1/transactions/:id.json" do
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -55,8 +57,9 @@ describe "GET /api/v1/transactions/find?parameters" do
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -66,12 +69,13 @@ describe "GET /api/v1/transactions/find?parameters" do
 
   it "returns the transaction with transaction_id of 1" do
 
-     get "/api/v1/transactions/find?transaction_id=#{@transaction_1.transaction_id}"
+     get "/api/v1/transactions/find?transaction_id=#{@transaction_1.id}"
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -85,8 +89,9 @@ describe "GET /api/v1/transactions/find?parameters" do
 
        expect(json_body).to eq({
          "id" => @transaction_1.id,
-         "credit_card_number" => @transaction_1.credit_card_number,
-         "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+         "invoice_id" => @transaction_1.invoice_id,
+         "credit_card_number"=> @transaction_1.credit_card_number,
+         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
          "result" => "success",
          "created_at" => parse_time(@transaction_1.created_at),
          "updated_at" => parse_time(@transaction_1.updated_at)
@@ -94,28 +99,45 @@ describe "GET /api/v1/transactions/find?parameters" do
     end
 
 
-  it "returns the transaction with the credit_card_number of 1000" do
+  it "returns the transaction with the credit_card_number of transactions ccc" do
 
-    get "/api/v1/transactions/find?credit_card_number=1000"
+    get "/api/v1/transactions/find?credit_card_number=#{@transaction_1.credit_card_number}"
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
        })
     end
 
-    it "returns the transaction with the quantity of 25" do
+    it "returns the transaction with the credit_card_expiration_date of 2016-05-31" do
 
-      get "/api/v1/transactions/find?quantity=25"
+      get "/api/v1/transactions/find?credit_card_expiration_date=2016-05-31"
 
        expect(json_body).to eq({
          "id" => @transaction_1.id,
+         "invoice_id" => @transaction_1.invoice_id,
          "credit_card_number" => @transaction_1.credit_card_number,
-         "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
+         "result" => "success",
+         "created_at" => parse_time(@transaction_1.created_at),
+         "updated_at" => parse_time(@transaction_1.updated_at)
+         })
+      end
+
+    it "returns the transaction with the result of success" do
+
+      get "/api/v1/transactions/find?result=success"
+
+       expect(json_body).to eq({
+         "id" => @transaction_1.id,
+         "invoice_id" => @transaction_1.invoice_id,
+         "credit_card_number" => @transaction_1.credit_card_number,
+         "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
          "result" => "success",
          "created_at" => parse_time(@transaction_1.created_at),
          "updated_at" => parse_time(@transaction_1.updated_at)
@@ -128,8 +150,9 @@ describe "GET /api/v1/transactions/find?parameters" do
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -142,8 +165,9 @@ describe "GET /api/v1/transactions/find?parameters" do
 
      expect(json_body).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -164,22 +188,24 @@ describe "GET /api/v1/transactions/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
        })
   end
 
-  it "returns the all transaction with credit_card_number of 1000" do
+  it "returns the all transaction with credit_card_number of transaction_1" do
 
-     get "/api/v1/transactions/find_all?credit_card_number=1000"
+     get "/api/v1/transactions/find_all?credit_card_number=#{@transaction_1.credit_card_number}"
 
      expect(json_body[0]).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -187,8 +213,9 @@ describe "GET /api/v1/transactions/find_all?parameters" do
 
      expect(json_body[1]).to eq({
        "id" => @transaction_2.id,
-       "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "invoice_id" => @transaction_2.invoice_id,
+       "credit_card_number" => @transaction_2.credit_card_number,
+       "credit_card_expiration_date" => parse_date(@transaction_2.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_2.created_at),
        "updated_at" => parse_time(@transaction_2.updated_at)
@@ -196,14 +223,15 @@ describe "GET /api/v1/transactions/find_all?parameters" do
   end
 
 
-  it "returns the all transaction with quantity of 25" do
+  it "returns the all transaction with credit_card_expiration_date 2016-03-31" do
 
-     get "/api/v1/transactions/find_all?quantity=25"
+     get "/api/v1/transactions/find_all?credit_card_expiration_date=2016-05-31"
 
      expect(json_body[0]).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -211,13 +239,29 @@ describe "GET /api/v1/transactions/find_all?parameters" do
 
      expect(json_body[1]).to eq({
        "id" => @transaction_2.id,
-       "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "invoice_id" => @transaction_2.invoice_id,
+       "credit_card_number" => @transaction_2.credit_card_number,
+       "credit_card_expiration_date" => parse_date(@transaction_2.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_2.created_at),
        "updated_at" => parse_time(@transaction_2.updated_at)
       })
   end
+
+  it "returns all transactions with the result of success" do
+
+    get "/api/v1/transactions/find_all?result=success"
+
+     expect(json_body[0]).to eq({
+       "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
+       "credit_card_number" => @transaction_1.credit_card_number,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
+       "result" => "success",
+       "created_at" => parse_time(@transaction_1.created_at),
+       "updated_at" => parse_time(@transaction_1.updated_at)
+       })
+    end
 
   xit "returns all transactions with the same created_at" do
 
@@ -225,8 +269,9 @@ describe "GET /api/v1/transactions/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
@@ -239,8 +284,9 @@ describe "GET /api/v1/transactions/find_all?parameters" do
 
      expect(json_body[0]).to eq({
        "id" => @transaction_1.id,
+       "invoice_id" => @transaction_1.invoice_id,
        "credit_card_number" => @transaction_1.credit_card_number,
-       "credit_card_expiration_date" => @transaction_1.credit_card_expiration_date,
+       "credit_card_expiration_date" => parse_date(@transaction_1.credit_card_expiration_date),
        "result" => "success",
        "created_at" => parse_time(@transaction_1.created_at),
        "updated_at" => parse_time(@transaction_1.updated_at)
