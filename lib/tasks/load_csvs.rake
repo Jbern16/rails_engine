@@ -1,4 +1,4 @@
-require 'csv'
+require 'csv_loader'
 
 namespace :load_csvs do
 
@@ -11,25 +11,19 @@ namespace :load_csvs do
   end
 
   task load_customers: :environment do
-    
+    CsvLoader.new("customers", Customer)
   end
 
   task load_invoices: :environment do
-    CSV.foreach("#{Rails.root}/db/data/invoices.csv", headers: true) do |row|
-      Invoice.create(row.to_h)
-    end
+    CsvLoader.new("invoices", Invoice)
   end
 
   task load_invoice_items: :environment do
-    CSV.foreach("#{Rails.root}/db/data/invoice_items.csv", headers: true) do |row|
-      InvoiceItem.create(row.to_h)
-    end
+    CsvLoader.new("invoice_items", InvoiceItem)
   end
 
   task load_transactions: :environment do
-    CSV.foreach("#{Rails.root}/db/data/transactions.csv", headers: true) do |row|
-      Transaction.create(row.to_h)
-    end
+    CsvLoader.new("transactions", Transaction)
   end
 
   task all: [
