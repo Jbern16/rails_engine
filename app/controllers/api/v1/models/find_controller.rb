@@ -8,5 +8,4 @@ class Api::V1::Models::FindController < ApiController
   def show
     respond_with model.find_by(selector)
   end
-
 end
