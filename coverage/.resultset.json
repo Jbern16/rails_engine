@@ -74,8 +74,9 @@
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/services/models_service.rb": [
         1,
+        null,
         1,
-        98,
+        164,
         null,
         null,
         1,
@@ -83,8 +84,11 @@
         null,
         null,
         1,
+        164,
         null,
-        66,
+        null,
+        null,
+        null,
         null,
         null,
         1,
@@ -162,8 +166,19 @@
         1,
         1,
         null
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/lib/csv_loader.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1464842522
+    "timestamp": 1464878559
   }
 }

@@ -1,15 +1,14 @@
 module ModelsService
   def model
-    params[:model].classify.constantize
+    params[:model].classify.constantize if table_names.include?(params[:model])
   end
 
   def selector
-    params.permit(all_columns)
+    params.permit(model.column_names)
   end
 
-  def all_columns
-    Merchant.column_names | Customer.column_names | InvoiceItem.column_names |
-    Transaction.column_names | Item.column_names | Invoice.column_names
+  def table_names
+    ActiveRecord::Base.connection.tables
   end
 
   def change_currency
