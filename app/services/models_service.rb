@@ -1,4 +1,4 @@
-module ModelsHelper
+module ModelsService
   def model
     params[:model].classify.constantize
   end
@@ -13,8 +13,6 @@ module ModelsHelper
   end
 
   def change_currency
-    if params[:unit_price]
-      params[:unit_price] = (params[:unit_price].to_f * 100).round
-    end
+    params[:unit_price] = (params[:unit_price].to_f * 100).round if params[:unit_price]
   end
 end

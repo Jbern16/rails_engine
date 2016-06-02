@@ -1,28 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/helpers/models_helper.rb": [
-        1,
-        1,
-        98,
-        null,
-        null,
-        1,
-        66,
-        null,
-        null,
-        1,
-        null,
-        66,
-        null,
-        null,
-        1,
-        66,
-        4,
-        null,
-        null,
-        null
-      ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/customer.rb": [
         1,
         1,
@@ -94,6 +72,26 @@
         null,
         null
       ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/services/models_service.rb": [
+        1,
+        1,
+        98,
+        null,
+        null,
+        1,
+        66,
+        null,
+        null,
+        1,
+        null,
+        66,
+        null,
+        null,
+        1,
+        66,
+        null,
+        null
+      ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/invoice_serializer.rb": [
         1,
         1,
@@ -131,7 +129,6 @@
         1,
         37,
         null,
-        null,
         null
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/random_controller.rb": [
@@ -167,6 +164,6 @@
         null
       ]
     },
-    "timestamp": 1464840829
+    "timestamp": 1464842522
   }
 }

@@ -3,22 +3,15 @@ require 'csv'
 namespace :load_csvs do
 
   task load_merchants: :environment do
-    CSV.foreach("#{Rails.root}/db/data/merchants.csv", headers: true) do |row|
-      Merchant.create(row.to_h)
-
-    end
+    CsvLoader.new("merchants", Merchant)
   end
 
   task load_items: :environment do
-    CSV.foreach("#{Rails.root}/db/data/items.csv", headers: true) do |row|
-      Item.create(row.to_h)
-    end
+    CsvLoader.new("items", Item)
   end
 
   task load_customers: :environment do
-    CSV.foreach("#{Rails.root}/db/data/customers.csv", headers: true) do |row|
-      Customer.create(row.to_h)
-    end
+    
   end
 
   task load_invoices: :environment do
