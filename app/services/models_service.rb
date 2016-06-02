@@ -1,6 +1,10 @@
 module ModelsService
   def model
-    params[:model].classify.constantize if table_names.include?(params[:model])
+    params[:model].classify.constantize
+  end
+
+  def relationship
+    params[:relationship] if table_names.include?(params[:relationship].pluralize)
   end
 
   def selector
