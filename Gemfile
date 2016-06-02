@@ -14,6 +14,7 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'simplecov'
   gem 'pry-rails'
   gem 'factory_girl_rails'
   gem "database_cleaner"

@@ -39,7 +39,7 @@ class Api::V1::ObjectsController < ApiController
       end
 
       def find_model
-         File.basename(controller_name).classify.constantize
+       controller_name.classify.constantize
       end
 
 end

@@ -1,5 +1,3 @@
-
-
 class CreateMerchants < ActiveRecord::Migration
   def change
     enable_extension 'citext'

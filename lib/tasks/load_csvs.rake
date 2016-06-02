@@ -5,6 +5,7 @@ namespace :load_csvs do
   task load_merchants: :environment do
     CSV.foreach("#{Rails.root}/db/data/merchants.csv", headers: true) do |row|
       Merchant.create(row.to_h)
+
     end
   end
 
