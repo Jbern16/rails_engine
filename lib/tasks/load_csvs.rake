@@ -1,4 +1,4 @@
-require 'csv_loader'
+require 'csv'
 
 namespace :load_csvs do
 
@@ -35,4 +35,13 @@ namespace :load_csvs do
     :load_transactions,
   ]
 
+end
+
+
+class CsvLoader
+  def initialize(file, model)
+    CSV.foreach("#{Rails.root}/db/data/#{file}.csv", headers: true) do |row|
+      model.create(row.to_h)
+    end
+  end
 end

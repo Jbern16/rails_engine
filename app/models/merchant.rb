@@ -4,6 +4,7 @@ class Merchant < ActiveRecord::Base
   has_many :invoice_items, through: :invoices
   has_many :customers, through: :invoices
 
+
   def self.most_revenue(limit)
      joins(:invoice_items).group(:id).order("sum(invoice_items.unit_price * invoice_items.quantity) DESC")
      .limit(limit["quantity"].to_i)
@@ -26,24 +27,30 @@ class Merchant < ActiveRecord::Base
   end
 
   def self.revenue_single(id)
-    joins(invoices: [:transactions, :invoice_items])
+    revenue = joins(invoices: [:transactions, :invoice_items])
     .where(transactions: {result: "success"})
     .where("merchants.id = ?", id)
     .sum("invoice_items.unit_price * invoice_items.quantity")
+
+    {"revenue" => (revenue.to_f / 100).to_s }
   end
 
   def self.revenue_by_date(id, date)
-    joins(invoices: [:transactions, :invoice_items])
+    revenue = joins(invoices: [:transactions, :invoice_items])
     .where(transactions: {result: "success"})
     .where("invoices.created_at =?", date)
     .where("merchants.id = ?", id)
     .sum("invoice_items.unit_price * invoice_items.quantity")
+
+    {"revenue" => (revenue.to_f / 100).to_s }
   end
 
   def self.total_revenue_by_date(date)
-    joins(invoices: [:invoice_items])
+    revenue = joins(invoices: [:invoice_items])
     .where("invoices.created_at = ?", date)
     .sum("invoice_items.unit_price * invoice_items.quantity")
+
+    {"total_revenue" => (revenue.to_f / 100).to_s }
   end
 
   def self.favorite_customer(id)
