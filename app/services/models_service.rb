@@ -18,4 +18,8 @@ module ModelsService
   def change_currency
     params[:unit_price] = (params[:unit_price].to_f * 100).round if params[:unit_price]
   end
+
+  def logic_selector
+    params.permit(:quantity, :date, :id)
+  end
 end

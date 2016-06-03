@@ -48,5 +48,4 @@ FactoryGirl.define do
     updated_at "2012-03-25 09:54:09 UTC"
   end
 
-
 end

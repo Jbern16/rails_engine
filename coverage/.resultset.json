@@ -1,170 +1,221 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/customer.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/invoice_item.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/invoice.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/merchant.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/transaction.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/relationships_controller.rb": [
-        1,
-        1,
-        14,
-        null,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/application_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/lib/application_responder.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/services/models_service.rb": [
-        1,
-        1,
-        164,
-        null,
-        null,
-        1,
-        14,
-        null,
-        null,
-        1,
-        66,
-        null,
-        null,
-        1,
-        14,
-        null,
-        null,
-        1,
-        66,
-        null,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/invoice_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/transaction_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models_controller.rb": [
-        1,
-        1,
-        6,
-        null,
-        null,
-        1,
-        6,
-        null,
-        null
-      ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/customer_serializer.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/find_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        29,
-        null,
-        null,
-        1,
-        37,
-        null,
-        null
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/logic_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/random_controller.rb": [
-        1,
-        1,
-        6,
-        null,
-        null
+        0,
+        0,
+        0,
+        0,
+        0
       ],
-      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/item_serializer.rb": [
-        1,
-        1,
-        null,
-        1,
-        21,
-        null,
-        null,
-        null
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models/relationships_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api/v1/models_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/api_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/customer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/invoice.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/invoice_item.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/item.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/merchant.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/models/transaction.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/customer_serializer.rb": [
+        0,
+        0,
+        0
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/invoice_item_serializer.rb": [
-        1,
-        1,
-        null,
-        1,
-        22,
-        null,
-        null,
-        null
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/invoice_serializer.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/item_serializer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/merchant_serializer.rb": [
-        1,
-        1,
-        null
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/serializers/transaction_serializer.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/services/formatter_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/app/services/models_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jonathanbernesser/Turing/3module/rails_engine/lib/application_responder.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       "/Users/jonathanbernesser/Turing/3module/rails_engine/lib/csv_loader.rb": [
         0,
@@ -178,6 +229,6 @@
         0
       ]
     },
-    "timestamp": 1464880318
+    "timestamp": 1464903486
   }
 }
